@@ -10,7 +10,7 @@ isMongoAlive()
         return discord.clientLogin();
     })
     .then(() => {
-        logger.info("DiscordBotStarter is started");
+        logger.info("ToolsBaleine is started");
     })
     .catch(err => {
         logger.error(err);
