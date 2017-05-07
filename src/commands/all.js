@@ -1,2 +1,1 @@
-import "./ping";
-import "./example";
+import "./wordDefinition";

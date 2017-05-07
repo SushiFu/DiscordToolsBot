@@ -1,9 +1,9 @@
 {
-  "name": "DiscordBotStarter",
+  "name": "ToolsBaleine",
   "version": "1.0.0",
-  "description": "Discord Bot Starter in Node.JS",
+  "description": "Tools Discord Bot for \"La Baleine\"",
   "main": "dist/server.js",
-  "repository": "https://github.com/LaBaleineFr/DiscordBotSample.git",
+  "repository": "https://github.com/LaBaleineFr/ToolsBaleine.git",
   "author": "SushiFu <SushiFu@gmx.fr>",
   "license": "MIT",
   "scripts": {
