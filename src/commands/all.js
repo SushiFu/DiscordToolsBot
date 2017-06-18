@@ -1,1 +1,2 @@
 import "./wordDefinition";
+import "./welcomemessage";

@@ -2,7 +2,7 @@
 
 ## Features
 - Help Definitions
-- ...
+- Welcome new guild member and give them a role
 
 ## Prerequisites
 #### Optimize for VSCode
