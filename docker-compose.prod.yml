@@ -1,9 +1,9 @@
 version: "3"
-services: 
+services:
     bot:
         restart: always
         image: $HUB_URL:$TAG
-        networks: 
+        networks:
             - backend
             - db
         environment:
@@ -13,6 +13,7 @@ services:
             - DISCORD_TOKEN=${DISCORD_TOKEN}
             - DISCORD_CHAN_ID=${DISCORD_CHAN_ID}
             - DISCORD_CMD_CHAN_ID=${DISCORD_CMD_CHAN_ID}
+            - NEWBIE_ROLE=${NEWBIE_ROLE}
 
 networks:
     backend:

@@ -1,5 +1,5 @@
 version: "3"
-services: 
+services:
     mongodb:
         image: mongo:latest
         volumes:
@@ -22,6 +22,7 @@ services:
             - DISCORD_TOKEN=${DISCORD_TOKEN}
             - DISCORD_CHAN_ID=${DISCORD_CHAN_ID}
             - DISCORD_CMD_CHAN_ID=${DISCORD_CMD_CHAN_ID}
+            - NEWBIE_ROLE=${NEWBIE_ROLE}
 
     # bot-test:
     #     image: node:latest
