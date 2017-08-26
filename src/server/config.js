@@ -1,4 +1,6 @@
-import { version } from "../../package.json";
+import {
+    version
+} from "../../package.json";
 
 const params = {
     VERSION: version,
@@ -8,6 +10,7 @@ const params = {
     DISCORD_TOKEN: process.env.DISCORD_TOKEN,
     DISCORD_CHAN_ID: process.env.DISCORD_CHAN_ID,
     DISCORD_CMD_CHAN_ID: process.env.DISCORD_CMD_CHAN_ID,
+    NEWBIE_ROLE: process.env.NEWBIE_ROLE,
 };
 
 Object.keys(params).forEach((key) => {
@@ -17,17 +20,17 @@ Object.keys(params).forEach((key) => {
 });
 
 if (!(params.NODE_ENV === "production" ||
-    params.NODE_ENV === "test" ||
-    params.NODE_ENV === "development")) {
+        params.NODE_ENV === "test" ||
+        params.NODE_ENV === "development")) {
     throw new Error("NODE_ENV could only take 'production', 'test' or 'development' values");
 }
 
 if (!(params.LOG_LEVEL === "fatal" ||
-    params.LOG_LEVEL === "error" ||
-    params.LOG_LEVEL === "warn" ||
-    params.LOG_LEVEL === "info" ||
-    params.LOG_LEVEL === "debug" ||
-    params.LOG_LEVEL === "trace")) {
+        params.LOG_LEVEL === "error" ||
+        params.LOG_LEVEL === "warn" ||
+        params.LOG_LEVEL === "info" ||
+        params.LOG_LEVEL === "debug" ||
+        params.LOG_LEVEL === "trace")) {
     throw new Error("LOG_LEVEL is not set or invalid");
 }
 

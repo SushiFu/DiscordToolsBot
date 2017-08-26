@@ -13,7 +13,7 @@ function clientLogin() {
 
 /**
  * Register message listener on DISCORD_CMD_CHAN_ID
- * @param {Function} callback 
+ * @param {Function} callback
  */
 function onCmdChannelMessage(callback) {
     client.on("message", message => {
@@ -25,7 +25,7 @@ function onCmdChannelMessage(callback) {
 
 /**
  * Register message listener on every channels
- * @param {Function} callback 
+ * @param {Function} callback
  */
 function onMessageEverywhere(callback) {
     client.on("message", message => {
@@ -61,4 +61,24 @@ function sendOn(channel, message) {
     return channel.send(message);
 }
 
-export default { client, clientLogin, onCmdChannelMessage, onMessageEverywhere, sendOnCmdChannel, sendOnDefaultChannel, sendOn };
+/**
+ * Register guild listener on member join
+ * @param {Function} callback
+ */
+
+function onMemberJoin(callback) {
+    client.on("guildMemberAdd", member => {
+        callback(member);
+    });
+}
+
+export default {
+    client,
+    clientLogin,
+    onCmdChannelMessage,
+    onMessageEverywhere,
+    sendOnCmdChannel,
+    sendOnDefaultChannel,
+    sendOn,
+    onMemberJoin
+};
