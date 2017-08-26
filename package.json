@@ -1,6 +1,6 @@
 {
   "name": "ToolsBaleine",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Tools Discord Bot for \"La Baleine\"",
   "main": "dist/server.js",
   "repository": "https://github.com/LaBaleineFr/ToolsBaleine.git",

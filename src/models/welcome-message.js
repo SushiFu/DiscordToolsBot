@@ -32,8 +32,6 @@ WelcomeMessageSchema.statics = {
     create(welcomeMessage) {
         const wMsg = new this();
         wMsg.message = welcomeMessage;
-        console.log("MODEL");
-        console.log(wMsg.message);
         return wMsg.save();
     },
     all() {
