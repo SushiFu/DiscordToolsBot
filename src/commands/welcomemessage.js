@@ -1,7 +1,7 @@
 import discord from "../server/discord";
 import logger from "../server/logger";
 import wMsgCtrl from "../controllers/welcomemessage";
-import config from "../server/config.js"
+import config from "../server/config.js";
 
 discord.onMemberJoin(member => {
     let welcomeRole = config.NEWBIE_ROLE;
@@ -12,8 +12,8 @@ discord.onMemberJoin(member => {
                 .then(wMsg => {
                     let welcomeMsg = wMsg[wMsg.length - 1].message;
                     guildMember.send(welcomeMsg)
-                        .then(message => {
-                            logger.info(" Welcome Message sent");
+                        .then(() => {
+                            logger.info("Welcome Message sent");
                         })
                         .catch(err => logger.error(err));
                 })
