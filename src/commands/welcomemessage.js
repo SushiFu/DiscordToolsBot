@@ -5,7 +5,7 @@ import config from "../server/config.js";
 
 discord.onMemberJoin(member => {
     let welcomeRole = config.NEWBIE_ROLE;
-    let role = member.guild.roles.find("id", welcomeRole);
+    let role = member.guild.roles.get(welcomeRole);
     member.addRole(role)
         .then(guildMember => {
             wMsgCtrl.getWelcomeMessage()
