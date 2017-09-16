@@ -4,8 +4,9 @@ services:
         restart: always
         image: $HUB_URL:$TAG
         networks:
-            - backend
+            - pia
             - db
+        network_mode: "service:vpn"
         environment:
             - NODE_ENV=production
             - LOG_LEVEL=info
@@ -16,7 +17,7 @@ services:
             - NEWBIE_ROLE=${NEWBIE_ROLE}
 
 networks:
-    backend:
+    pia:
         external: true
     db:
         external: true
