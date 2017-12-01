@@ -81,7 +81,7 @@ WordDefinitionSchema.statics = {
      * @returns {Promise}
      */
     all(valid = true) {
-        return this.find({valid: valid});
+        return this.find({ valid: valid }).sort("word");
     }
 };
 
