@@ -1,4 +1,4 @@
-# Tools "La Baleine" Discord Bot
+# Tools Discord Bot
 
 ## Features
 - Help Definitions
